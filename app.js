@@ -44,3 +44,12 @@ const sumDigits = (num) => {
     // add array together
 }
 console.log(sumDigits(111111));
+
+// 4. Pythagoras
+// Write a function calculateSide that takes two arguments: sideA and sideB, 
+// //and returns the solution for sideC using the Pythagorean theorem.
+
+const calculateSide = (a,b) => {
+    return(Math.sqrt((a * a) + (b * b)));
+}
+console.log(calculateSide(8,6));
