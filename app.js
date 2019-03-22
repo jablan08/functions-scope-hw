@@ -68,3 +68,62 @@ const sumArray = (array) => {
     }
 }
 console.log(sumArray([2,2,1,3,5]));
+
+// 6. Prime Numbers
+// A Prime number is a number that is not evenly divisible by another number except 1 and itself. 
+// If you want to read more deeply about it, go here. To test whether a number is Prime, 
+// you only need to test as far as the square root of that number. 
+// This is advisable for optimization and testing large numbers.
+
+// Step One
+// Write a function called checkPrime that will test whether a 
+// number is Prime. The function will return true (Boolean) if Prime, 
+// false if not. Hint: Check every number up to the square root.
+//  To do this, try a for loop.
+
+// Step Two
+// Write another function called printPrimes that will print 
+// (console log) all the Primes up to an arbitrary limit. 
+// For example, if you invoke your function with printPrimes(97), 
+// it will print all the Prime numbers up to and including 97. 
+// This function can call on the previous checkPrime function.
+
+// const checkPrime = (num) => {
+//     let prime = [];
+//     for (let i = 2; i <= num; i++) {
+//         prime[i] = true;
+//     }
+//     let squar = Math.sqrt(num);
+//     for (let i = 2; i < squar; i++) { 
+//         if (prime[i] === true) {
+//             for (let p = i * i; p < num; p += 1) {
+//                 prime[p] = false;
+//             }
+//         }
+//     }
+//     for (let i = 2; i < num; i++ ) {
+//         if (prime[i]=== true) {
+//             console.log(i + " " + prime[i]);
+//         }
+//     }
+// } 
+
+// checkPrime(97); 
+const checkPrime = (num) => {
+    let primes = Math.sqrt(num); 
+    for (let i = 2; i <= primes; i++) {
+        if(num % i === 0) return false; 
+    return num > 1;
+    }
+}
+const printPrimes = (num) => {
+    for (let i = 2; i <= num; i++) {
+        if (checkPrime(i) === true) {
+            console.log(i + " is a Prime number");
+        }
+    }
+    // loop through num
+    // place num is function to test if true
+    // if true then log that is prime
+}
+printPrimes(97);
