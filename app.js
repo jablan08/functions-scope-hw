@@ -1,6 +1,7 @@
 // 1. Verbal questions
 // What is the difference between a parameter and an argument?
-    // The argument is the input, the parameter is how the input is represented in the function.
+    // The argument is the input into the function, the parameter is the value, string, or array that 
+    //will be inputed into the string.
 // Within a function, what is the difference between return and console.log?
     // console.log is will print out whatever is specified in the (). Return will return a value of a function to pass data.
 // What are the implications of the ability of a function to return a value?
@@ -81,34 +82,9 @@ console.log(sumArray([2,2,1,3,5]));
 // false if not. Hint: Check every number up to the square root.
 //  To do this, try a for loop.
 
-// Step Two
-// Write another function called printPrimes that will print 
-// (console log) all the Primes up to an arbitrary limit. 
-// For example, if you invoke your function with printPrimes(97), 
-// it will print all the Prime numbers up to and including 97. 
-// This function can call on the previous checkPrime function.
 
-// const checkPrime = (num) => {
-//     let prime = [];
-//     for (let i = 2; i <= num; i++) {
-//         prime[i] = true;
-//     }
-//     let squar = Math.sqrt(num);
-//     for (let i = 2; i < squar; i++) { 
-//         if (prime[i] === true) {
-//             for (let p = i * i; p < num; p += 1) {
-//                 prime[p] = false;
-//             }
-//         }
-//     }
-//     for (let i = 2; i < num; i++ ) {
-//         if (prime[i]=== true) {
-//             console.log(i + " " + prime[i]);
-//         }
-//     }
-// } 
 
-// checkPrime(97); 
+
 const checkPrime = (num) => {
     let primes = Math.sqrt(num); 
     for (let i = 2; i <= primes; i++) {
@@ -116,6 +92,13 @@ const checkPrime = (num) => {
     return num > 1;
     }
 }
+
+// Step Two
+// Write another function called printPrimes that will print 
+// (console log) all the Primes up to an arbitrary limit. 
+// For example, if you invoke your function with printPrimes(97), 
+// it will print all the Prime numbers up to and including 97. 
+// This function can call on the previous checkPrime function.
 const printPrimes = (num) => {
     for (let i = 2; i <= num; i++) {
         if (checkPrime(i) === true) {
