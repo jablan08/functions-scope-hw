@@ -27,3 +27,20 @@ const checkPalindrome = (str) => {
 }
 
 checkPalindrome("Hello");
+
+// 3. Digit Sum
+// Write a function sumDigits that accepts a number 
+// and returns the sum of its digits.
+
+const sumDigits = (num) => {
+    let storeNum = num.toString().split("");
+    // console.log(storeNum);
+    let sum1 = 0 
+    // write a loop that loops through the num given
+    for (let i = 0; i < storeNum.length; i++) {
+        sum1 = sum1 + parseInt(storeNum[i]);
+    } return sum1;
+    // stores in a array
+    // add array together
+}
+console.log(sumDigits(111111));
